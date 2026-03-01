@@ -34,7 +34,7 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowedOriginPatterns(
-                List.of("http://localhost:3000", "https://edflix-ittacademy.web.app")
+                List.of("http://localhost:3000", "https://url-az.web.app")
         );
 
         config.setAllowedMethods(
@@ -49,4 +49,5 @@ public class SecurityConfig {
         source.registerCorsConfiguration("/**", config);
         return source;
     }
+
 }
