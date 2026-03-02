@@ -1,2 +1,2 @@
 # Link-condenser
-Link condenser is an online application for shortening large URLs. I ahve used base 62 (a-z,0-9,A-Z) for hashing into short urls.
+Link condenser is an online application for shortening large URLs. I have used base 62 (a-z,0-9,A-Z) for hashing into short urls. This also blocks spamming requests and filters using Token Bucket rate limiter. The core critical section has been bounded by Reetrant locking mechanism and also maintained a server side cache to save redundant requests.
