@@ -77,7 +77,7 @@ public class Filter extends OncePerRequestFilter {
             response.setHeader("Access-Control-Allow-Credentials", "true");
             response.setStatus(429);
             response.setContentType("text/plain");
-            response.getWriter().write("Too many requests. Please try again after 1 minute");
+            response.getWriter().write("Too many requests. Please try again after one minute");
             response.getWriter().flush();
             return;
         }
@@ -85,4 +85,5 @@ public class Filter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 }
+
 
